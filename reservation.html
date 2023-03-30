@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="style/grid-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="java/java.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="picture">
+            <img src="images/aki/grohn_logo.jpg" alt="my-logo">
+        </div>
+        <div id="headings">
+            <h1>Hieronta Gröhn</h1>
+        </div>
+    </header>    
+
+        <main id="main-reservation">
+            <!-- Henkilökuva -->
+            <div class="container">
+                <img src="images/aki/grohn_logo2.jpg" alt="Avatar" class="image">
+                <div class="overlay">
+                    <div class="text">Aki Sarkkinen</div>
+                </div>  
+            </div>
+
+            <!-- Henkilöesittely
+                https://www.w3schools.com/css/css3_images.asp
+
+
+                https://www.w3schools.com/css/tryit.asp?filename=trycss_css_image_overlay_fade
+            -->
+
+           <!-- SIDEBAR, SHOULD BE SAME EVERY PAGE -->
+            <aside id="main-aside">
+                <div>
+                    <button id="menu" onclick="open_nav()">&#9776;</button>
+                </div>
+                <nav id="navigation">
+                    <a class="box" id="box1" href="./grid.html"><div><span>Mainpage</span></div></a>
+                    <a class="box" id="box2" href="./contact.html"><div><span>Reservation</span></div></a>
+                    <a class="box" id="box3" href="./About.html"><div><span>About</span></div></a>
+                    <a class="box" id="box4" href="./game.html"><div><span>Game</span></div></a>
+                </nav>
+            </aside>
+
+            <section id="section1">
+                <div class="column">
+                    <article>
+                        <h3>RESERVATION INFORMATION</h3>
+                            <p>
+                                <span class="first-letter">W</span>orld has faced a global <u>education crisis</u>. 
+                                The pandemic severely caused educational disruptions 
+                                and rose new challenges concerning education. Insufficient knowledge 
+                                and skills are commonly mentioned as an impediment to 
+                                effective information and communications techonoly use.
+                            </p>
+
+                            <q>Cited: <abbr title="https://sdgs.un.org/goals/goal4">UN sustainability goals</abbr></q>
+
+                    </article>
+                </div>
+            </section>
+
+            <section id="section2">
+                <div class="column">
+                    <article>
+                        <h3>Form</h3>
+                        
+                            <p>
+                                <span class="first-letter">W</span>riter is a last year major student in the faculty of education. 
+                                Hopeing this presented view would make one think and maybe wake new thoughts about the subject.
+                                The view is built of university studies, experiences in the fiel as a teacher and own experience in the schoolsystem as a student.
+                                Studies in the field of education along with attained experiences has required to reflect on education 
+                                and on choices in the class room on both general and personal level. Subject about different 
+                                kind of learners and students who are struggling more or less in the school system has especially been a target of my interest.
+                            </p>
+                    </article>
+                </div>
+            </section>
+
+        </main>
+
+        <footer id="footer-grid">
+            
+            <div id="left" class="column">
+                <a href="https://www.ntnu.edu/lifeandhousing/gjovik"><img src="https://www.ntnu.edu/o/ntnu-theme/images/logo_ntnu.svg" alt="NTNU-logo"></a>
+                
+                <address id="middle">
+
+                    Designed and delivered by: <a href="mailto:nooams@stud.ntnu.no">Nooa Sarkkinen</a>,<br>
+                    <abbr title="Raufossvegen 40, 2821 Gjøvik; Phone number: 61 13 54 00">Information technology and electrical engineering</abbr>,<br>
+                    <a target="_blank" href="https://www.ulapland.fi/EN/Units/Faculty-of-Education"><abbr title="University of lapland - faculty of education">Exhange student from Finland</abbr></a>
+
+                </address>
+            </div>
+
+            <div id="right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d945.8287448720993!2d10.682214053827835!3d60.78987115668373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sno!2sno!4v1668941736911!5m2!1sno!2sno" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </footer>
+
+
+</body>

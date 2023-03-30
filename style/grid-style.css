@@ -1,0 +1,469 @@
+/* 
+
+
+
+
+*/
+
+body, footer, header {
+    font-family: 'quicksand','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    min-width: 450px;
+    padding: 0;
+    margin: auto;
+    color: #84828F;
+}
+
+body {
+    background-color: #01020e;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*  TOP BANNER STAYS THE SAME*/
+
+header {                    
+    display: flex;
+    /* padding: 5px; */
+    height: 7.5vh;
+    background-color: #2C3D55;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+        /*
+             ____________________
+            |                    |
+            |    headings        |
+            |____________________|
+
+        */
+        h1 {
+            font-family: kaushan;
+            color: #84828F;
+        }
+
+        h1 {
+            letter-spacing: 0.3ch;
+            color: #a9a7ac;
+            font-size: 3em;
+            font-style: italic;
+            text-shadow: #1e0830;
+        }
+
+        h2 {
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        h3 {
+            font-size: large;
+        }
+
+        h4 {
+            font-size: medium;   
+        }
+
+        h2, h3, h4 {
+            font-family: 'quicksand'; 
+            color: #84828F;
+        } 
+
+        h4 {
+            text-align: left;
+        }
+
+
+        
+/*    {MENU} and {return-up} BUTTON for NAV    */
+
+/* #menu  {
+    background-color: transparent;
+    border: none;
+    font-size: 25px; 
+    color: #424242;
+    border-radius: 3px;
+
+    position: absolute;
+    top: 4vw;
+    right: 40px;
+}
+
+#menu:hover {
+    background-color: #b4aeac;
+} */
+
+
+                        #navigation {
+                            display: flex;
+                            flex-direction: row;
+                            justify-items: center;
+                            align-items: center;
+                        }
+
+                        /* Make links visible, delete this rule */
+                        #navigation a {
+                            visibility: hidden;
+                        }
+
+                        .box {
+                            padding: 3px;
+                            color: #c0c0c0;
+                            font-size: small;
+                        }
+
+                        #box1, #box2, #box3, #box4 {
+                            margin: 5px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .box:hover {
+                            color: #7a5a71;
+                        }
+
+                        #box1 {
+                            grid-column: 1/2;
+                            grid-row: 1/2;
+                        }
+
+                        #box2 {
+                            grid-column: 2/3;
+                            grid-row: 1/2;
+                        }
+
+                        #box3 {
+                            grid-column: 3/4;
+                            grid-row: 1/2;
+                        }
+
+                        #box4 {
+                            grid-column: 4/5;
+                            grid-row: 1/2;
+                        }
+
+/*
+ ___________________
+|                   |
+|    GRID layout    |
+|___________________|
+
+        MAIN         
+*/
+
+#main-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40vh 40vh;
+    row-gap: 10px;
+    column-gap: 10px;
+    max-width: 1000px;
+    margin: 10px auto 10px auto;
+    padding: 0 10px 0 10px;
+}
+
+#main-aside {
+    display: flex;
+    flex-direction: column;
+    background-color: #212e41;
+    align-items: center;
+}
+
+
+
+
+/* 
+__________________________
+
+    Section settings
+    - General settings
+__________________________
+    */
+section *:not(p) {
+    transition: 0.5s;
+}
+
+section p {
+    transition: 0.05s;
+}
+
+.content {
+    width: 90%;
+    height: 95%;
+    margin: 2.5% 5% 2.5% 5%;
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+}
+
+#section2, #section3 {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 15% 70% 15%;
+}
+
+.right, .left {
+    display: inline-flex;
+    width: 98%;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+}
+.right p, .left p {
+    font-size: 24px;
+    overflow: hidden;
+}
+
+#section1, #section4 {
+    background-position: center;
+    background-size: cover;
+}
+
+/* section:hover > .content:not(:hover) {
+    backdrop-filter: blur(5px);
+} */
+
+
+/* 
+_______________
+
+    SECTION1 
+_______________
+
+*/
+
+#section1 {
+    background-image: url('../images/nooa/nooa_rocknroll_bw.jpg');
+}
+
+#section1 .content {
+    justify-content: flex-end;
+}
+
+#section1 .content h2 {
+    font-family: kaushan;
+    font-size: 45px;
+}
+
+/* 
+_______________
+
+    SECTION2 
+_______________
+
+*/
+#section2 {
+    background-color:#39304A;
+}
+#section2 h2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: flex;
+    justify-content:space-around;
+    margin: 0;
+    font-family: kaushan;
+    text-align:end;
+}
+#section2 .left, #section2 .right {
+    grid-row: 2/3;
+    margin: 2px;
+    font-size: smaller;
+    font-family: lobster;
+}
+#section2 .left {
+    grid-column: 1/2;
+}
+#section2 .right {
+    grid-column: 2/3;
+}
+#section2 .bottom {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Positioning of text in section 2 */
+.left div .indent, .right div .indent {
+    text-align: center;
+}
+
+/* 
+_______________
+
+    SECTION3 
+_______________
+
+*/
+#section3 {
+    background-color:#635C51;
+}
+
+/* 
+_______________
+
+    SECTION4 
+_______________
+
+*/
+#section4 {
+    background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
+    color:rgb(255, 255, 255);
+}
+
+/* 
+_______________________
+
+    SECTION FUNCTIONS 
+_______________________
+
+*/
+
+section:hover h2 {
+    color: whitesmoke;
+}
+
+#section1:hover, #section2:hover, #section3:hover, #section4:hover {
+    transition: 0.5s;
+}
+#section3:hover {
+    box-shadow: 2px 2px 0px 2px #54332e;
+}
+#section2:hover {
+    box-shadow: 2px 2px 0px 2px rgb(103, 89, 121);
+}
+#section1:hover {
+    box-shadow: 2px 2px 0px 2px rgb(18, 10, 10);
+}
+#section4:hover {
+    box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
+    animation: image-loop 15s ease infinite;
+}
+
+
+/* _________
+
+ FOOTER
+__________ */
+
+
+#footer-grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-rows: 100px;
+    background-color: #2C3D55;
+}
+
+#footer-grid #left, #footer-grid #right, #footer-grid #middle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 1/2;
+    
+    flex-wrap: wrap;
+}
+
+#footer-grid #left {
+    grid-column: 1/2;
+}
+
+#footer-grid #left img {
+    max-width: 100%;
+}
+
+#footer-grid #middle {
+    grid-column: 2/3;
+}
+
+#footer-grid #right {
+    grid-column: 3/4;
+}
+
+iframe {
+    height: 80%;
+    max-width: 120px;
+    border-radius: 12.5%;
+}
+
+
+
+
+/* 
+ ___________________
+|_____Responsive____|
+*/
+
+@media screen and (max-width:950px) { 
+
+    header {
+        grid-column: 1/3;
+    }
+    
+    h1, #section1 .content h2 {
+        font-size: 5vw;
+    }
+
+    #footer-grid {
+        font-size: 70%;
+    }
+
+    section .content {
+        max-width: 500px;
+    }
+
+    .left p, .right p {
+        font-size: 17px;
+        flex-wrap:wrap-reverse;
+    }
+
+    section h2 {
+        font-size: 4vw;
+        font-weight: bold;
+    }
+}
+
+@keyframes image-loop {
+    
+    33%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
+        }
+    66%     {background-image: url('../images/friends-B-W.jpeg');
+        }
+} 
+
+@keyframes popup-animation {
+    0%      {top: 100px;
+            left: 20%;
+            transform: rotate(0deg);
+        }
+    
+    10%     {top: 120px;  
+            left: 20%;
+        }
+
+    90%     {top: 110px;
+            left: 20%;
+        }
+    
+    100%    {top: 1500px;
+            left: 20%;
+        }
+} 
+
+/* -------------------------------- */
+
+@font-face {
+    font-family: lobster;
+    src: url('../fonts/Lobster-Regular.ttf');
+}
+@font-face {
+    font-family: kaushan;
+    src: url('../fonts/KaushanScript-Regular.ttf');
+}
+@font-face {
+    font-family: 'quicksand';
+    src: url('../fonts/quicksand/Quicksand-Regular.otf');
+}

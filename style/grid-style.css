@@ -311,7 +311,6 @@ _______________
 */
 #section4 {
     background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
-    animation: image-loop 15s ease infinite;
     color:rgb(255, 255, 255);
 }
 
@@ -341,6 +340,7 @@ section:hover h2 {
 }
 #section4:hover {
     box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
+    animation: image-loop 15s ease infinite;
 }
 
 

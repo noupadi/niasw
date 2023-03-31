@@ -8,6 +8,8 @@
 body, footer, header {
     font-family: 'quicksand','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     min-width: 300px;
+    max-width: 700px;
+    min-height: 900px;
     padding: 0;
     margin: auto;
     color: #84828F;
@@ -397,7 +399,7 @@ iframe {
 |_____Responsive____|
 */
 
-@media screen and (max-width:950px) { 
+@media screen and (max-width:700px) { 
 
     header {
         grid-column: 1/3;
@@ -416,7 +418,7 @@ iframe {
     }
 
     .left p, .right p {
-        font-size: 17px;
+        font-size: 20px;
         flex-wrap:wrap-reverse;
     }
 

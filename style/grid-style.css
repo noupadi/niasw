@@ -310,6 +310,7 @@ _______________
 
 */
 #section4 {
+    background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
     animation: image-loop 15s ease infinite;
     color:rgb(255, 255, 255);
 }
@@ -426,7 +427,6 @@ iframe {
 }
 
 @keyframes image-loop {
-    0%      {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');}
     
     33%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
         }

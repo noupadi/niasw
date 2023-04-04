@@ -31,7 +31,6 @@ a {
 
 header {                    
     display: flex;
-    /* padding: 5px; */
     height: 7.5vh;
     background-color: #2C3D55;
     text-align: center;
@@ -54,13 +53,13 @@ header {
         h1 {
             letter-spacing: 0.3ch;
             color: #a9a7ac;
-            font-size: 3em;
+            font-size: 35px;
             font-style: italic;
             text-shadow: #1e0830;
         }
 
         h2 {
-            font-size: 30px;
+            font-size: 3vi;
             font-style: italic;
         }
 
@@ -250,7 +249,7 @@ _______________
 
 #section1 .content h2 {
     font-family: kaushan;
-    font-size: 45px;
+    font-size: 5vi;
 }
 
 /* 
@@ -271,19 +270,31 @@ _______________
     justify-content:space-around;
     margin: 0;
     font-family: kaushan;
-    text-align:end;
+    justify-content: end;
+    margin: 0 5px 0 0;
 }
 
 #section2 #cv-table {
     grid-row: 2/4;
     grid-column: 1/3;
+    overflow-y: auto;
 }
 
 table {
-    border: 1px solid black;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    box-shadow: 0px 0px 1px 0.5px black;
+}
+
+
 
 /*
 #section2 .left, #section2 .right {
@@ -306,9 +317,12 @@ table {
 }
 
 /* Positioning of text in section 2 */
+
+/*
 .left div .indent, .right div .indent {
     text-align: center;
-} */
+}
+*/
 
 /* 
 _______________
@@ -344,7 +358,6 @@ _______________________
 section:hover h2 {
     color: whitesmoke;
 }
-
 #section1:hover, #section2:hover, #section3:hover, #section4:hover {
     transition: 0.5s;
 }
@@ -361,6 +374,7 @@ section:hover h2 {
     box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
     animation: image-loop 15s ease infinite;
 }
+
 
 
 /* _________
@@ -418,30 +432,11 @@ iframe {
 
 @media screen and (max-width:700px) { 
 
-    header {
-        grid-column: 1/3;
+    h1 {
+        font-size: 5vi;
     }
-    
-    h1, #section1 .content h2 {
-        font-size: 5vw;
-    }
-
     #footer-grid {
         font-size: 70%;
-    }
-
-    section .content {
-        max-width: 500px;
-    }
-
-    .left p, .right p {
-        font-size: 20px;
-        flex-wrap:wrap-reverse;
-    }
-
-    section h2 {
-        font-size: 4vw;
-        font-weight: bold;
     }
 }
 

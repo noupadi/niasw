@@ -277,6 +277,11 @@ _______________
 #section2 #cv-table {
     grid-row: 2/4;
     grid-column: 1/3;
+    width: 100%;
+}
+
+#section2 #cv-table table {
+    align-content: center;
 }
 
 /*

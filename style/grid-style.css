@@ -227,10 +227,6 @@ _______________
     justify-content: flex-end;
 }
 
-#section1 .content h2 {
-    font-size: 40px;
-}
-
 /* 
 _______________       _______________
                   |
@@ -296,6 +292,13 @@ _______________
 #section4 {
     background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
     color:rgb(255, 255, 255);
+    animation: image-loop 20s infinite;
+}
+#section1:hover h2 {
+    color: #a084d3
+}
+#section4:hover h2 {
+    color: #81ca8e;
 }
 /* 
 ________________________
@@ -305,8 +308,17 @@ ________________________
  
 APPLIES TO #section1 and #section4  **section2 and 3 have been determined separately** 
 */
-section:hover h2 {
-    color: whitesmoke;
+#section1:hover .content h2 {
+    color: #c7ffd1;
+}
+#section1:hover {
+    box-shadow: 2px 2px 0px 2px rgb(18, 10, 10);
+}
+#section2:hover {
+    box-shadow: 2px 2px 0px 2px rgb(103, 89, 121);
+}
+#section2:hover h2 {
+    color: #6e49b4;
 }
 #section3:hover {
     box-shadow: 2px 2px 0px 2px #54332e;
@@ -314,20 +326,13 @@ section:hover h2 {
 #section3:hover h2 {
     color: #c7ffd1;
 }
-#section2:hover {
-    box-shadow: 2px 2px 0px 2px rgb(103, 89, 121);
-}
-#section2:hover h2 {
-    color: #c3a6f8;
-}
-#section1:hover {
-    box-shadow: 2px 2px 0px 2px rgb(18, 10, 10);
-}
 #section4:hover {
     box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
-    animation: image-loop 20s infinite;
 }
-#section4:hover #hobby::after {
+#section4:hover h2 {
+    color: #cdb3fd;
+}
+#hobby::after {
     visibility: visible;
     content: "";
     background-color: transparent;
@@ -418,18 +423,21 @@ iframe {
         }
     50%     {content: 'Snowboarding';
         }
-    75%     {content: 'coding';
+    75%     {content: 'Coding';
+        }
+    100%    {content: 'Hobbies'
         }
 } 
 
 @keyframes image-loop {
-    0%      {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
-        }
+
     25%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
         }
     50%     {background-image: url('../images/friends-B-W.jpeg');
         }
     75%     {background-image: url('../images/coding-desktop.jpg');
+        }
+    100%    {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
         }
 } 
 

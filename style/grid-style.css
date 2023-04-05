@@ -312,22 +312,22 @@ APPLIES TO #section1 and #section4  **section2 and 3 have been determined separa
     color: #c7ffd1;
 }
 #section1:hover {
-    box-shadow: 2px 2px 0px 2px rgb(18, 10, 10);
+    box-shadow: 2px 2px 0px 2px white;
 }
 #section2:hover {
-    box-shadow: 2px 2px 0px 2px rgb(103, 89, 121);
+    box-shadow: 2px 2px 0px 2px #c7ffd1;
 }
 #section2:hover h2 {
-    color: #6e49b4;
+    color: #caadff;
 }
 #section3:hover {
-    box-shadow: 2px 2px 0px 2px #54332e;
+    box-shadow: 2px 2px 0px 2px #6e49b4;
 }
 #section3:hover h2 {
     color: #c7ffd1;
 }
 #section4:hover {
-    box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
+    box-shadow: 2px 2px 0px 2px white;
 }
 #section4:hover h2 {
     color: #cdb3fd;

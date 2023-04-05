@@ -45,21 +45,19 @@ header {
             |____________________|
 
         */
-        h1 {
+        h1, h2 {
             font-family: kaushan;
-            color: #84828F;
         }
 
         h1 {
-            letter-spacing: 0.3ch;
-            color: #a9a7ac;
+            letter-spacing: 0.4ch;
             font-size: 35px;
             font-style: italic;
             text-shadow: #1e0830;
         }
 
         h2 {
-            font-size: 3vi;
+            font-size: 30px;
             font-style: italic;
         }
 
@@ -71,16 +69,21 @@ header {
             font-size: medium;   
         }
 
-        h2, h3, h4 {
+        h3, h4 {
             font-family: 'quicksand'; 
-            color: #84828F;
         } 
+
+        h1, h2, h3, h4 {
+            color: #84828F;
+        }
 
         h4 {
             text-align: left;
         }
 
-
+        abbr {
+            text-decoration: none;
+        }
         
 /*    {MENU} and {return-up} BUTTON for NAV    */
 
@@ -177,8 +180,6 @@ header {
 }
 
 
-
-
 /* 
 __________________________
 
@@ -186,12 +187,8 @@ __________________________
     - General settings
 __________________________
     */
-section *:not(p) {
+section *:not(p, table) {
     transition: 0.5s;
-}
-
-section p {
-    transition: 0.05s;
 }
 
 .content {
@@ -209,27 +206,10 @@ section p {
     grid-template-rows: 15% 70% 15%;
 }
 
-/* .right, .left {
-    display: inline-flex;
-    width: 98%;
-    margin: 0;
-    padding: 0;
-    flex-direction: column;
-}
-.right p, .left p {
-    font-size: 24px;
-    overflow: hidden;
-} */
-
 #section1, #section4 {
     background-position: center;
     background-size: cover;
 }
-
-/* section:hover > .content:not(:hover) {
-    backdrop-filter: blur(5px);
-} */
-
 
 /* 
 _______________
@@ -248,8 +228,7 @@ _______________
 }
 
 #section1 .content h2 {
-    font-family: kaushan;
-    font-size: 5vi;
+    font-size: 40px;
 }
 
 /* 
@@ -263,66 +242,51 @@ _______________
     background-color:#39304A;
 }
 
-#section2 h2 {
+#section2 h2, #section3 h2 {
     grid-column: 1/3;
     grid-row: 1/2;
     display: flex;
     justify-content:space-around;
     margin: 0;
-    font-family: kaushan;
     justify-content: end;
     margin: 0 5px 0 0;
 }
 
-#section2 #cv-table {
+#section3 h2 {
+    justify-content: start;
+}
+
+#section2 #cv-table, #section3 #cv-table {
     grid-row: 2/4;
     grid-column: 1/3;
     overflow-y: auto;
 }
 
-table {
+#section3 #cv-table table, #section2 #cv-table table {
     width: 95%;
     margin-left: auto;
     margin-right: auto;
 }
 
-table, th, td {
-    border: 1px solid black;
+#section2 table, #section2 th, #section2 td {
+    border: 1px solid rgb(103, 89, 121);
+    box-shadow: 0px 0px 1px 0.5px rgb(103, 89, 121);
+    color: #817f88;
 }
 
-td {
-    box-shadow: 0px 0px 1px 0.5px black;
+#section3 table, #section3 th, #section3 td {
+    border: 1px solid #54332e;
+    box-shadow: 0px 0px 1px 0.5px #54332e;
+    color: #b6b5bb;  
 }
 
-
-
-/*
-#section2 .left, #section2 .right {
-    grid-row: 2/3;
-    margin: 2px;
-    font-size: smaller;
-    font-family: lobster;
-}
-#section2 .left {
-    grid-column: 1/2;
-}
-#section2 .right {
-    grid-column: 2/3;
-}
-#section2 .bottom {
-    grid-column: 1/3;
-    grid-row: 3/4;
-    display: flex;
-    justify-content: space-around;
+th {
+    font-family:kaushan;
 }
 
-/* Positioning of text in section 2 */
-
-/*
-.left div .indent, .right div .indent {
+.time {
     text-align: center;
 }
-*/
 
 /* 
 _______________
@@ -334,7 +298,6 @@ _______________
 #section3 {
     background-color:#635C51;
 }
-
 /* 
 _______________
 
@@ -347,6 +310,16 @@ _______________
     color:rgb(255, 255, 255);
 }
 
+
+#section4:hover #hobby::after {
+
+    visibility: visible;
+    content: "";
+    background-color: transparent;
+    animation: change-text 20s linear infinite;
+}
+
+
 /* 
 _______________________
 
@@ -358,9 +331,9 @@ _______________________
 section:hover h2 {
     color: whitesmoke;
 }
-#section1:hover, #section2:hover, #section3:hover, #section4:hover {
+/* #section1:hover, #section2:hover, #section3:hover, #section4:hover {
     transition: 0.5s;
-}
+} */
 #section3:hover {
     box-shadow: 2px 2px 0px 2px #54332e;
 }
@@ -372,7 +345,7 @@ section:hover h2 {
 }
 #section4:hover {
     box-shadow: 2px 2px 0px 2px rgb(193, 193, 193);
-    animation: image-loop 15s ease infinite;
+    animation: image-loop 20s infinite;
 }
 
 
@@ -422,48 +395,56 @@ iframe {
     border-radius: 12.5%;
 }
 
-
-
-
 /* 
  ___________________
 |_____Responsive____|
 */
-
+/* Kun näytön leveys alle 700px */
 @media screen and (max-width:700px) { 
 
-    h1 {
+    h1, #section1 .content h2 {
         font-size: 5vi;
     }
+
+    h2 {
+        font-size: 4vi;
+        font-style: italic;
+    }
+
+    th, td {
+        font-size: 1vb;
+    }
+
     #footer-grid {
         font-size: 70%;
     }
 }
 
-@keyframes image-loop {
-    
-    33%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
+@media screen and (max-height:860px) {
+    section > * {
+        font-size: 80%;
+    }
+}
+
+@keyframes change-text {
+    0%      {content: 'Hobbies';
         }
-    66%     {background-image: url('../images/friends-B-W.jpeg');
+    25%     {content: 'Skateboarding';
+        }
+    50%     {content: 'Snowboarding';
+        }
+    75%     {content: 'coding';
         }
 } 
 
-@keyframes popup-animation {
-    0%      {top: 100px;
-            left: 20%;
-            transform: rotate(0deg);
+@keyframes image-loop {
+    0%      {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
         }
-    
-    10%     {top: 120px;  
-            left: 20%;
+    25%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
         }
-
-    90%     {top: 110px;
-            left: 20%;
+    50%     {background-image: url('../images/friends-B-W.jpeg');
         }
-    
-    100%    {top: 1500px;
-            left: 20%;
+    75%     {background-image: url('../images/coding-desktop.jpg');
         }
 } 
 

@@ -81,7 +81,7 @@ header {
         }
 
         abbr {
-            text-decoration: none;
+            text-decoration:underline;
         }
         
 /*    {MENU} and {return-up} BUTTON for NAV    */
@@ -277,7 +277,7 @@ th {
     font-family:kaushan;
 }
 
-.time {
+.center {
     text-align: center;
 }
 

@@ -125,7 +125,7 @@ header, footer {
                             align-items: center;
                         }
 
-                        .box:hover {
+                        .box:hover, .box:active {
                             color: #7a5a71;
                         }
 
@@ -309,28 +309,28 @@ ________________________
  
 APPLIES TO #section1 and #section4  **section2 and 3 have been determined separately** 
 */
-#section1:hover .content h2 {
+#section1:hover .content h2, #section1:active .content h2 {
     color: #c7ffd1;
 }
-#section1:hover {
+#section1:hover, #section1:active {
     box-shadow: 2px 2px 0px 2px white;
 }
-#section2:hover {
+#section2:hover, #section2:active {
     box-shadow: 2px 2px 0px 2px #c7ffd1;
 }
-#section2:hover h2 {
+#section2:hover h2, #section2:active h2 {
     color: #caadff;
 }
-#section3:hover {
+#section3:hover, #section3:active {
     box-shadow: 2px 2px 0px 2px #6e49b4;
 }
-#section3:hover h2 {
+#section3:hover h2, #section3:active h2 {
     color: #c7ffd1;
 }
-#section4:hover {
+#section4:hover, #section4:active {
     box-shadow: 2px 2px 0px 2px white;
 }
-#section4:hover h2 {
+#section4:hover h2, #section4:active h2 {
     color: #cdb3fd;
 }
 #hobby::after {
@@ -351,7 +351,7 @@ __________ */
 #footer-grid {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 3fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 100px;
 }
 
@@ -360,7 +360,6 @@ __________ */
     align-items: center;
     justify-content: center;
     grid-row: 1/2;
-    
     flex-wrap: wrap;
 }
 
@@ -383,7 +382,7 @@ __________ */
 iframe {
     height: 80%;
     max-width: 120px;
-    border-radius: 12.5%;
+    /* border-radius: ; */
 }
 
 /* 

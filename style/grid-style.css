@@ -14,12 +14,12 @@ body {
     background-color: #01020e;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    
 }
-
-/*  TOP BANNER STAYS THE SAME*/
 
 header {                    
     display: flex;
@@ -76,6 +76,10 @@ header, footer {
 
         abbr {
             text-decoration:underline;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
         }
         
 /*    {MENU} and {return-up} BUTTON for NAV    */

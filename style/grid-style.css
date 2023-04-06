@@ -82,72 +82,29 @@ header, footer {
             color: inherit;
         }
         
-/*    {MENU} and {return-up} BUTTON for NAV    */
-
-/* #menu  {
-    background-color: transparent;
-    border: none;
-    font-size: 25px; 
-    color: #424242;
-    border-radius: 3px;
-
+#socialmedia {
     position: absolute;
-    top: 4vw;
-    right: 40px;
+    right: 10px;
 }
 
-#menu:hover {
-    background-color: #b4aeac;
-} */
-
-
-                        #navigation {
-                            display: flex;
-                            flex-direction: row;
-                            justify-items: center;
-                            align-items: center;
-                        }
-
-                        /* Make links visible, delete this rule */
-                        #navigation a {
-                            visibility: hidden;
-                        }
-
-                        .box {
-                            padding: 3px;
-                            color: #c0c0c0;
-                            font-size: small;
-                        }
-
-                        #box1, #box2, #box3, #box4 {
-                            margin: 5px;
-                            justify-content: center;
-                            align-items: center;
-                        }
-
-                        .box:hover, .box:active {
-                            color: #7a5a71;
-                        }
-
-                        #box1 {
-                            grid-column: 1/2;
-                            grid-row: 1/2;
-                        }
-
-                        #box2 {
-                            grid-column: 2/3;
-                            grid-row: 1/2;
-                        }
-
-                        #box3 {
-                            grid-column: 3/4;
-                            grid-row: 1/2;
-                        }
-
-                        #box4 {
-                            grid-column: 4/5;
-                            grid-row: 1/2;
-                        }
+.fa { 
+    font-size: 50px;
+    background: transparent;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    border-radius: 50px;
+}
+.fa-facebook {
+    color: #3B5998;
+}
+.fa-instagram {
+    color: #a289f7;
+    /* color: linear-gradient(, #fa7e1e, #d62976, #962fbf, #4f5bd5); */
+}
+.fa-linkedin {
+    color: #007bb5;
+}
 
 /*
  ___________________
@@ -334,7 +291,6 @@ APPLIES TO #section1 and #section4  **section2 and 3 have been determined separa
     color: #cdb3fd;
 }
 #hobby::after {
-    visibility: visible;
     content: "";
     background-color: transparent;
     animation: change-text 20s linear infinite;
@@ -382,13 +338,22 @@ __________ */
 iframe {
     height: 80%;
     max-width: 120px;
-    /* border-radius: ; */
 }
 
 /* 
  ___________________
 |_____Responsive____|
 */
+
+
+@media screen and (max-width:750px){
+    #socialmedia {
+        position: relative;
+        right: 0;
+        left: 5px;
+    }
+}
+
 /* Kun näytön leveys alle 700px */
 @media screen and (max-width:600px) { 
 
@@ -455,3 +420,80 @@ iframe {
     font-family: 'quicksand';
     src: url('../fonts/quicksand/Quicksand-Regular.otf');
 }
+
+
+
+
+
+
+/* 
+
+Possibly usable:
+menu button and navigation menu
+
+
+{MENU} and {return-up} BUTTON for NAV
+
+ #menu  {
+    background-color: transparent;
+    border: none;
+    font-size: 25px; 
+    color: #424242;
+    border-radius: 3px;
+
+    position: absolute;
+    top: 4vw;
+    right: 40px;
+}
+
+#menu:hover {
+    background-color: #b4aeac;
+}
+ #navigation {
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+
+                        #navigation a {
+                            visibility: visible;
+                        }
+
+                        .box {
+                            padding: 3px;
+                            color: #c0c0c0;
+                            font-size: small;
+                
+                        }
+
+                        #box1, #box2, #box3, #box4 {
+                            margin: 5px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        .box:hover, .box:active {
+                            color: #7a5a71;
+                        }
+
+                        #box1 {
+                            grid-column: 1/2;
+                            grid-row: 1/2;
+                        }
+
+                        #box2 {
+                            grid-column: 2/3;
+                            grid-row: 1/2;
+                        }
+
+                        #box3 {                          
+                            grid-column: 3/4;
+                            grid-row: 1/2;
+                        }
+
+                        #box4 {
+                            grid-column: 4/5;
+                            grid-row: 1/2;
+                        } */

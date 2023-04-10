@@ -1,7 +1,3 @@
-/* body {
-    min-height: 900px;
-} */
-
 body, footer, header {
     font-family: 'quicksand','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     min-width: 300px;
@@ -12,6 +8,7 @@ body, footer, header {
 
 body {
     background-color: #01020e;
+
 }
 
 body, html {
@@ -140,18 +137,20 @@ __________________________
     - General settings
 __________________________
     */
-section *:not(p, table) {
+
+
+section *:not(p, h2, abbr) {
     transition: 0.5s;
 }
 
-.content {
+/* .content {
     width: 90%;
     height: 95%;
     margin: 2.5% 5% 2.5% 5%;
     display: flex;
     flex-direction: column;
     font-size: larger;
-}
+} */
 
 #section2, #section3 {
     display: grid;
@@ -376,8 +375,12 @@ iframe {
 }
 
 @media screen and (max-height:860px) {
-    section > * {
-        font-size: 80%;
+    #section3 > * {
+        font-size: 70%;
+    }
+
+    #section2 > * {
+        font-size: 60%;
     }
 }
 
@@ -396,14 +399,16 @@ iframe {
 
 @keyframes image-loop {
 
-    25%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
+    20%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
         }
-    50%     {background-image: url('../images/friends-B-W.jpeg');
+    40%     {background-image: url('../images/friends-B-W.jpeg');
         }
-    75%     {background-image: url('../images/coding-desktop.jpg');
+    60%     {background-image: url('../images/coding-desktop.jpg');
         }
-    100%    {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
+    80%     {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
         }
+    100%    {background-image: url('../images/nooa/padel-nooa-bnw.jpg');
+    }
 } 
 
 /* -------------------------------- */

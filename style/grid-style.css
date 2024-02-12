@@ -93,10 +93,10 @@ header, footer {
     border-radius: 50px;
 }
 .fa-facebook {
-    color: #3B5998;
+    color: #598eff;
 }
 .fa-instagram {
-    color: #a289f7;
+    color: #f667dc;
     /* color: linear-gradient(, #fa7e1e, #d62976, #962fbf, #4f5bd5); */
 }
 .fa-linkedin {
@@ -143,12 +143,13 @@ section *:not(p, h2, abbr) {
     transition: 0.5s;
 }
 
+
 /* .content {
     width: 90%;
     height: 95%;
     margin: 2.5% 5% 2.5% 5%;
     display: flex;
-    flex-direction: column;
+
     font-size: larger;
 } */
 
@@ -170,14 +171,15 @@ _______________
 _______________
 
 */
-
+#section1, #section4 {
+    display: flex;
+}
 #section1 {
     background-image: url('../images/nooa/nooa_rocknroll_bw.jpg');
-}
-
-#section1 .content {
     justify-content: flex-end;
-}
+    flex-direction: column;}
+
+
 
 /* 
 _______________       _______________
@@ -249,7 +251,8 @@ _______________
 #section4 {
     background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
     color:rgb(255, 255, 255);
-    animation: image-loop 20s infinite;
+    animation: image-loop 24s linear infinite;
+    justify-content: space-around;
 }
 #section1:hover h2 {
     color: #a084d3
@@ -292,7 +295,7 @@ APPLIES TO #section1 and #section4  **section2 and 3 have been determined separa
 #hobby::after {
     content: "";
     background-color: transparent;
-    animation: change-text 20s linear infinite;
+    animation: change-text 24s linear infinite;
 }
 
 
@@ -387,25 +390,27 @@ iframe {
 @keyframes change-text {
     0%      {content: 'Hobbies';
         }
-    25%     {content: 'Skateboarding';
+    20%     {content: 'Skateboarding';
         }
-    50%     {content: 'Snowboarding';
+    40%     {content: 'Snowboarding';
         }
-    75%     {content: 'Coding and infosec';
+    60%     {content: 'Coding and infosec';
         }
-    100%    {content: 'Hobbies'
-        }
+    80%     {content: 'Padel'
+        }   
+    100%    {content: 'Hobbies'}
 } 
 
 @keyframes image-loop {
+    0%      {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');}
 
     20%     {background-image: url('../images/nooa/gents-rocker-BW.jpeg');
         }
-    40%     {background-image: url('../images/nooa/splitti-pose-bnw.jpg');
+    40%     {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
         }
-    60%     {background-image: url('../images/coding-desktop.jpg');
-        }
-    80%     {background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
+    60%     {background-image: url('../images/nooa/splitti-pose-bnw.jpg');
+    }
+    80%     {background-image: url('../images/coding-desktop.jpg');     
         }
     100%    {background-image: url('../images/nooa/padel-nooa-bnw.jpg');
     }

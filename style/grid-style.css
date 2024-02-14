@@ -1,3 +1,10 @@
+
+/* NOTE
+
+Continue workin on #main-roadmap .flex-container to make the element 
+--> flex both items 100 height and 50% of the width
+*/
+
 body, footer, header {
     font-family: 'quicksand','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     min-width: 350px;
@@ -187,7 +194,6 @@ a {
 }
         
 
-
 /*
  ___________________
 |                   |
@@ -196,6 +202,84 @@ a {
 
         MAIN         
 */
+#main-roadmap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 45vh 45vh 45vh 45vh;
+    row-gap: 10px;
+    column-gap: 10px;
+    max-width: 700px;
+    margin: 10px auto 10px auto;
+}
+
+#main-roadmap section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center; 
+    text-align: center;
+}
+
+#main-roadmap #section1 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #000000;
+    color: #9e9e9e;
+}
+
+#main-roadmap #section2 {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    background-color: #9e9e9e;
+    color: #000000;
+}
+
+#main-roadmap #section3 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    background-color: #000000;
+    color: #9e9e9e;
+}
+
+#main-roadmap #section4 {
+    grid-column: 1/3;
+    grid-row: 4/5;
+    background-color: #9e9e9e;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+/* 
+
+__________________
+
+
+    MAIN-MAIN 
+
+__________________
+
+*/
+
 
 #main-main {
     display: grid;
@@ -207,14 +291,6 @@ a {
     margin: 10px auto 10px auto;
 }
 
-#main-aside {
-    display: flex;
-    flex-direction: column;
-    background-color: #515f6d;
-    align-items: center;
-}
-
-
 /* 
 __________________________
 
@@ -223,10 +299,10 @@ __________________________
 __________________________
     */
 
-
-section *:not(p, h2, abbr) {
+/* 
+#main-main section *:not(p, h2, abbr) {
     transition: 0.5s;
-}
+} */
 
 
 /* .content {
@@ -234,17 +310,16 @@ section *:not(p, h2, abbr) {
     height: 95%;
     margin: 2.5% 5% 2.5% 5%;
     display: flex;
-
     font-size: larger;
 } */
 
-#section2, #section3 {
+#main-main #section2, #main-main #section3 {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 15% 70% 15%;
 }
 
-#section1, #section4 {
+#main-main #section1, #main-main #section4 {
     background-position: center;
     background-size: cover;
 }
@@ -256,14 +331,14 @@ _______________
 _______________
 
 */
-#section1, #section4 {
+#main-main #section1, #main-main #section4 {
     display: flex;
 }
-#section1 {
+
+#main-main #section1 {
     background-image: url('../images/nooa/nooa_rocknroll_bw.jpg');
     justify-content: flex-end;
     flex-direction: column;}
-
 
 
 /* 
@@ -274,10 +349,11 @@ _______________   |   _______________
 
 */
 
-#section2 {
+#main-main #section2 {
     background-color:#4e4363;
 }
-#section2 h2, #section3 h2 {
+
+#main-main #section2 h2, #main-main #section3 h2 {
     grid-column: 1/3;
     grid-row: 1/2;
     display: flex;
@@ -286,19 +362,16 @@ _______________   |   _______________
     justify-content: end;
     margin: 0 5px 0 0;
 }
-#section2 > * {
+#main-main #section2 > * {
     color: #a084d3;
 }
-
-#section3 {
+#main-main #section3 {
     background-color:#3f6244;
 }
-#section3 h2 {
+#main-main #section3 h2 {
     color: #81ca8e;
 }
-
-
-#section2 .cv-table table, #section3 .cv-table table {
+#main-main #section2 .cv-table table, #main-main #section3 .cv-table table {
     width: 95%;
     height: 95%;
     margin: auto;
@@ -310,18 +383,19 @@ _______________   |   _______________
 }
 
 
-#section3 table, #section3 th, #section3 td {
+#main-main #section3 table, #section3 th, #section3 td {
     border: 1px solid #a3ffb4;
     box-shadow: 0px 0px 1px 0.5px #81ca8e;
     color: #81ca8e;  
 }
-#section2 table, #section2 th, #section2 td {
+#main-main #section2 table, #section2 th, #section2 td {
     border: 1px solid #a084d3;
     box-shadow: 0px 0px 1px 0.5px rgb(103, 89, 121);
 }
-th {
+#main-main th {
     font-family:kaushan;
 }
+
 .center {
     text-align: center;
 }
@@ -333,18 +407,35 @@ _______________
 _______________
 
 */
-#section4 {
+#main-main #section4 {
     background-image: url('../images/nooa/tailstall-BW-croppeds-medium.jpeg');
     color:rgb(255, 255, 255);
     animation: image-loop 24s linear infinite;
     justify-content: space-around;
 }
+
 #section1:hover h2 {
     color: #a084d3
+}
+#section1:hover {
+    box-shadow: 2px 2px 0px 2px white;
+}
+#section2:hover h2 {
+    color: #81ca8e;
+}
+#section2:hover {
+    box-shadow: 2px 2px 0px 2px #caadff;
+}
+#section3:hover h2 {
+    color: #81ca8e;
+}
+#section3:hover {
+    box-shadow: 2px 2px 0px 2px #caadff;
 }
 #section4:hover h2 {
     color: #81ca8e;
 }
+
 /* 
 ________________________
 
@@ -353,34 +444,25 @@ ________________________
  
 APPLIES TO #section1 and #section4  **section2 and 3 have been determined separately** 
 */
-#section1:hover .content h2, #section1:active .content h2 {
+/* #section1:hover .content h2, #section1:active .content h2 {
     color: #c7ffd1;
-}
-#section1:hover, #section1:active {
-    box-shadow: 2px 2px 0px 2px white;
-}
-#section2:hover, #section2:active {
-    box-shadow: 2px 2px 0px 2px #c7ffd1;
-}
-#section2:hover h2, #section2:active h2 {
-    color: #caadff;
-}
-#section3:hover, #section3:active {
+} */
+
+/* #section3:hover h2, #section3:active {
     box-shadow: 2px 2px 0px 2px #6e49b4;
 }
-#section3:hover h2, #section3:active h2 {
-    color: #c7ffd1;
-}
+
 #section4:hover, #section4:active {
     box-shadow: 2px 2px 0px 2px white;
 }
-#section4:hover h2, #section4:active h2 {
+#section4:active h2 {
     color: #cdb3fd;
-}
+} */
 #hobby::after {
     content: "";
     background-color: transparent;
     animation: change-text 24s linear infinite;
+    transition-duration: 0.5s;
 }
 
 
@@ -443,26 +525,26 @@ iframe {
 /* Kun näytön leveys alle 700px */
 @media screen and (max-width:600px) { 
 
-    h2 {
+    #main-main h2 {
         font-size: 4vi;
         font-style: italic;
     }
 
-    th, td {
+    #main-main th, #main-main td {
         font-size: 1.3vb;
     }
 
-    #footer-grid {
+    #main-main #footer-grid {
         font-size: 70%;
     }
 }
 
 @media screen and (max-height:860px) {
-    #section3 > * {
+    #main-main #section3 > * {
         font-size: 70%;
     }
 
-    #section2 > * {
+    #main-main #section2 > * {
         font-size: 60%;
     }
 }

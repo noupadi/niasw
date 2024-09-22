@@ -175,12 +175,12 @@ section {
 
 #introduction, #background, #kuvaosio {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     padding: 0 15px 0 15px;
 }
 
 #introduction > *, #background > *, #kuvaosio >* {
-    width: 50%;
+    /* width: 50%; */
 }
 
 #services:not(h2) {
